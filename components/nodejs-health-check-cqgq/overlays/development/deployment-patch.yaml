@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check-cqgq
+  namespace: e2e-demos-vlfo-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:5130a301af5adaa5f8c19b214457c109b730dd637a26b35f15cb6eb2061867b0
+        name: my-nodejs
+        resources: {}
+status: {}
